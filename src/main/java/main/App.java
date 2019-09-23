@@ -10,6 +10,7 @@ import utils.TimeUtils;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -18,18 +19,24 @@ import java.util.concurrent.TimeUnit;
  */
 public class App {
     public static void main(String[] args) throws IOException {
+        //获取最近一周的日程信息
         TimeParam time=new TimeUtils().getRecentWeekStr();
         System.out.println("from-->"+time.getFrom());
         System.out.println("to-->"+ time.getTo());
+        SimpleDateFormat sDateFormat=new SimpleDateFormat("yyyy-MM-dd");
 
-        String fromTime="";
-        String toTime="2019-09-18";
+//        String fromTime="";
+//        String toTime="2019-09-18";
+        String fromTime=sDateFormat.format(time.getFrom());
+        String toTime=sDateFormat.format(time.getTo());
+
         int limit=200;
         StringBuilder diDaJsonUrl=new StringBuilder("https://api.dida365.com/api/v2/project/all/completedInAll/");
-        diDaJsonUrl.append("?from="+fromTime);
-        diDaJsonUrl.append("&to="+toTime);
-        diDaJsonUrl.append("%2023:26:45&limit="+limit);
+        diDaJsonUrl.append("?from="+fromTime+"%2023:26:45");
+        diDaJsonUrl.append("&to="+toTime+"%2023:26:45");
+        diDaJsonUrl.append("&limit="+limit);
 //        设置httpClient
+
         HttpGet httpGet=null;
         try {
 //            设置url地址

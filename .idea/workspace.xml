@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4251ef55-1247-4a15-9c45-3a3283ea3049" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Parameters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/DidaUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ParametersUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/TimeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TimeUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +130,7 @@
       <workItem from="1569141783524" duration="13683000" />
       <workItem from="1569197428134" duration="67000" />
       <workItem from="1569197695916" duration="4788000" />
-      <workItem from="1569202529142" duration="5773000" />
+      <workItem from="1569202529142" duration="7545000" />
     </task>
     <servers />
   </component>
@@ -153,14 +149,10 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/App.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="fromTime" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
