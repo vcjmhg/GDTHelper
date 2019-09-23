@@ -1,8 +1,11 @@
 package main;
 
+import jdk.nashorn.internal.runtime.regexp.joni.constants.TargetInfo;
 import org.apache.http.client.methods.HttpGet;
 import pojo.DidaCalendar;
+import pojo.TimeParam;
 import utils.LoginUtils;
+import utils.TimeUtils;
 
 import java.io.*;
 import java.net.URI;
@@ -15,9 +18,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class App {
     public static void main(String[] args) throws IOException {
+        TimeParam time=new TimeUtils().getRecentWeekStr();
+        System.out.println("from-->"+time.getFrom());
+        System.out.println("to-->"+ time.getTo());
+
         String fromTime="";
         String toTime="2019-09-18";
-        int limit=50;
+        int limit=200;
         StringBuilder diDaJsonUrl=new StringBuilder("https://api.dida365.com/api/v2/project/all/completedInAll/");
         diDaJsonUrl.append("?from="+fromTime);
         diDaJsonUrl.append("&to="+toTime);
@@ -47,7 +54,7 @@ public class App {
 //      根据httpGet以及diDaCalender类获取响应处理后的java对象集合
         List<DidaCalendar> didaCalendarList= new LoginUtils().getJsonListByHttpGet(httpGet,DidaCalendar.class);
         for(DidaCalendar calendar:didaCalendarList){
-            System.out.println(calendar);
+            System.out.println(calendar.getTitle());
         }
     }
 }
