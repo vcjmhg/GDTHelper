@@ -36,6 +36,8 @@ public class DidaCalendar {
 	private String pomodoroSummaries;
 	private String kind;
 
+	private float score;
+
 	public String getId() {
 		return id;
 	}
@@ -276,11 +278,20 @@ public class DidaCalendar {
 		this.kind = kind;
 	}
 
+	public float getScore() {
+		return score;
+	}
+
+	public void setScore(float score) {
+		this.score = score;
+	}
+
 	@Override
 	public String toString() {
 		return "DidaCalendar{" +
 				"title='" + title + '\'' +
 				", content='" + content + '\'' +
+				", score=" + score +
 				'}';
 	}
 }

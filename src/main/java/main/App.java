@@ -1,6 +1,5 @@
 package main;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.TargetInfo;
 import org.apache.http.client.methods.HttpGet;
 import pojo.DidaCalendar;
 import pojo.TimeParam;
@@ -21,8 +20,6 @@ public class App {
     public static void main(String[] args) throws IOException {
         //获取最近一周的日程信息
         TimeParam time=new TimeUtils().getRecentWeekStr();
-        System.out.println("from-->"+time.getFrom());
-        System.out.println("to-->"+ time.getTo());
         SimpleDateFormat sDateFormat=new SimpleDateFormat("yyyy-MM-dd");
 
 //        String fromTime="";
