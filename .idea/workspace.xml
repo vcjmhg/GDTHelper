@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4251ef55-1247-4a15-9c45-3a3283ea3049" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/utils/TestDidaUtils.java" afterDir="false" />
+    <list default="true" id="4251ef55-1247-4a15-9c45-3a3283ea3049" name="Default Changelist" comment="1. 完成DidaUtils的基本封装&#10;2.可以在控台输出基本的日程信息以及代币信息&#10;&#10;接下来首先需要对日程信息按照截止日期进行排序然后实现发送Email邮件的功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/email/week_table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pojo/DidaCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pojo/DidaCalendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/DidaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DidaUtils.java" afterDir="false" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,6 +37,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -60,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestDidaUtils.testMethod_format">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -145,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestDidaUtils.testMethod_format" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.TestDidaUtils.testMethod_format" />
         <item itemvalue="Application.EDAMDemo" />
       </list>
     </recent_temporary>
@@ -172,12 +173,15 @@
       <workItem from="1569481293367" duration="300000" />
       <workItem from="1569481673343" duration="1855000" />
       <workItem from="1569719080849" duration="23000" />
-      <workItem from="1569914373691" duration="6735000" />
+      <workItem from="1569914373691" duration="15072000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -191,6 +195,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. 完成DidaUtils的基本封装&#10;2.可以在控台输出基本的日程信息以及代币信息&#10;&#10;接下来首先需要对日程信息按照截止日期进行排序然后实现发送Email邮件的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 完成DidaUtils的基本封装&#10;2.可以在控台输出基本的日程信息以及代币信息&#10;&#10;接下来首先需要对日程信息按照截止日期进行排序然后实现发送Email邮件的功能" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

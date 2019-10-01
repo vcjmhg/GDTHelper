@@ -290,7 +290,7 @@ public class DidaCalendar {
 	public String toString() {
 		return "DidaCalendar{" +
 				"title='" + title + '\'' +
-				", content='" + content + '\'' +
+				", dueDate='" + dueDate + '\'' +
 				", score=" + score +
 				'}';
 	}

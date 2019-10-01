@@ -3,7 +3,6 @@ package utils;
 import org.apache.http.client.methods.HttpGet;
 import pojo.DidaCalendar;
 import pojo.TimeParam;
-import sun.reflect.generics.scope.Scope;
 
 import java.io.IOException;
 import java.net.URI;
@@ -64,8 +63,9 @@ public class DidaUtils {
 
 //      根据httpGet以及diDaCalender类获取响应处理后的java对象集合
         this.didaCalendarList= new LoginUtils().getJsonListByHttpGet(httpGet,DidaCalendar.class);
+        format(this.didaCalendarList);
 
-        return didaCalendarList;
+        return this.didaCalendarList;
     }
 
     /**
@@ -91,7 +91,7 @@ public class DidaUtils {
         String toTime=sDateFormat.format(time.getTo());
         return  getCalenderByDate(fromTime,toTime);
     }
-
+    //TODO 对日程信息按照截止时间进行排序
     // 增加format方法对清单进行处理，使其末尾都有代币数字,如果末尾没有奖励默认为0.5，而且给定的score值不能大于99
     public void format(List<DidaCalendar> didaCalendarList){
 //        private void format(List<DidaCalendar> didaCalendarList){
@@ -102,6 +102,12 @@ public class DidaUtils {
             //获取代币的字符串
             int i=title.length();
             char numChar;
+
+            //对于末尾没有设置代币的，默认设置为0.5
+            if(!(title.charAt(i-1)>='0'&&title.charAt(i-1)<='9')){
+                d.setScore(0.5f);
+                continue;
+            }
             //判断代币是否是小数
             if(title.charAt(i-2)!= '.'){
                 i=i-1;
@@ -116,7 +122,6 @@ public class DidaUtils {
                     numChar=title.charAt(--i);
                 }
             }
-            System.out.println("score="+title.substring(i+1,title.length()));
 
             score=Float.valueOf(title.substring(i+1,title.length()));
             d.setScore(score);
@@ -125,7 +130,6 @@ public class DidaUtils {
             }else {
                 d.setTitle(title.substring(0,i+1));
             }
-            System.out.println("new title="+d.getTitle());
         }
     }
 }
