@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -91,10 +92,10 @@ public class DidaUtils {
         String toTime=sDateFormat.format(time.getTo());
         return  getCalenderByDate(fromTime,toTime);
     }
-    //TODO 对日程信息按照截止时间进行排序
     // 增加format方法对清单进行处理，使其末尾都有代币数字,如果末尾没有奖励默认为0.5，而且给定的score值不能大于99
     public void format(List<DidaCalendar> didaCalendarList){
-//        private void format(List<DidaCalendar> didaCalendarList){
+        //按照日期顺序对日程信息对象进行排序
+        Collections.sort(didaCalendarList);
         for(DidaCalendar d:didaCalendarList){
             String title=d.getTitle().trim();
             float score=0;

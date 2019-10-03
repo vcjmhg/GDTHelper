@@ -1,10 +1,18 @@
 package pojo;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+
 /**
  * 封装滴答清单获取的Json所解析的对象
  * @author MichealZhao
  *
  */
-public class DidaCalendar {
+public class DidaCalendar implements Comparable<DidaCalendar>{
 	private String id;
 	private String projectId;
 	private String sortOrder;
@@ -293,5 +301,21 @@ public class DidaCalendar {
 				", dueDate='" + dueDate + '\'' +
 				", score=" + score +
 				'}';
+	}
+
+	@Override
+	public int compareTo(@NotNull DidaCalendar dc) {
+		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd");
+		Date thatTime=null;
+		Date thisTime=null;
+		try {
+			thisTime=sf.parse(this.getDueDate().substring(0,10));
+			thatTime=sf.parse(dc.getDueDate().substring(0,10));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		if(thisTime.after(thatTime)) return 1;
+		else
+			return -1;
 	}
 }

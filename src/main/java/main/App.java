@@ -37,6 +37,7 @@ public class App {
                 System.out.println(didaCalendar.getTitle()+"   Date"+didaCalendar.getDueDate());
             }
         }
+        /*
         MailUtils mailUtils=new MailUtils("13069648310@163.com","VcJmHg0903","smtp.163.com");
         StringBuffer htmlContent=new StringBuffer();
         BufferedReader reader=null;
@@ -61,6 +62,6 @@ public class App {
         } catch (EmailException e) {
             e.printStackTrace();
         }
-
+        */
     }
 }
